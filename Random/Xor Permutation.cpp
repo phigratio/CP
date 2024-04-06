@@ -13,6 +13,31 @@ const ll maxi = 1e6 + 1;
 #define s second
 void muqtu()
 {
+  ll n;
+  cin >> n;
+  vector<ll> ans;
+  vector<ll> hesh(n + 1);
+  if (n == 3)
+  {
+    cout << -1 << endl;
+    return;
+  }
+  else
+  {
+    ans.pb(1);
+    ans.pb(4);
+    ans.pb(3);
+    ans.pb(2);
+    for (int i = 5; i <= n; i++)
+    {
+      ans.pb(i);
+    }
+    for (auto x : ans)
+    {
+      cout << x << " ";
+    }
+    cout << endl;
+  }
 }
 int main()
 {

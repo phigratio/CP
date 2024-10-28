@@ -19,17 +19,19 @@ void muqtu()
   if (m >= n)
     cout << 0 << endl;
   else
-    cout << (n-m) << endl;
+    cout << (n - m) << endl;
 }
 int main()
 {
   faster;
   ll t;
   cin >> t;
-  //t=1;f
+  // t=1;
   while (t--)
   {
     muqtu();
   }
   return 0;
 }
+
+// thanks for watching my code

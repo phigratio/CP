@@ -26,6 +26,7 @@ int main()
   faster;
   ll t;
   cin >> t;
+  //t=1;f
   while (t--)
   {
     muqtu();

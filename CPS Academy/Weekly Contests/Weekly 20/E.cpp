@@ -14,18 +14,37 @@ const ll maxi = 1e6 + 1;
 
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
+  ll a, b, c, d;
+  cin >> a >> b >> c >> d;
+  bool flag = true;
+  if (a != d)
+  {
+    flag = false;
+  }
+  else if (a == 0 && (c))
+  {
+    flag = false;
+  }
+  else if (d == 0 && (c))
+  {
+    flag = false;
+  }
+
+  if (flag == false)
+  {
     cout << 0 << endl;
+  }
   else
-    cout << (n-m) << endl;
+  {
+    cout << 1 << endl;
+  }
 }
+
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  t = 1;
   while (t--)
   {
     muqtu();

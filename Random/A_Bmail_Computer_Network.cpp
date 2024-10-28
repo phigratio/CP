@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -14,18 +15,35 @@ const ll maxi = 1e6 + 1;
 
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
-  else
-    cout << (n-m) << endl;
+  ll n;
+  cin >> n;
+  vector<ll> arr(n - 1);
+  vector<ll> par(n + 1, -1);
+  for (int i = 0; i < n - 1; i++)
+  {
+    cin >> arr[i];
+    par[i + 2] = arr[i];
+  }
+  ll i = n;
+  vector<ll> ans;
+  ans.pb(n);
+  while (par[i] != 1)
+  {
+    ans.pb(par[i]);
+    i = par[i];
+  }
+  ans.pb(1);
+
+  reverse(ans.begin(), ans.end());
+  for (int i = 0; i < ans.size(); i++)
+    cout << ans[i] << " ";
 }
+
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  t = 1;
   while (t--)
   {
     muqtu();

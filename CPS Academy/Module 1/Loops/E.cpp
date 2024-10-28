@@ -12,14 +12,20 @@ const ll maxi = 1e6 + 1;
 #define F first
 #define S second
 
+vector<ll> hesh(1001);
+
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
+  ll n;
+  cin >> n;
+  if (n > 24)
+  {
+    cout << "YES" << endl;
+  }
   else
-    cout << (n-m) << endl;
+  {
+    cout << "NO" << endl;
+  }
 }
 int main()
 {

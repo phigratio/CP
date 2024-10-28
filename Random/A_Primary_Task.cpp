@@ -14,12 +14,33 @@ const ll maxi = 1e6 + 1;
 
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
+  string s;
+  cin >> s;
+  if (s[0] != '1' or s[1] != '0')
+  {
+    cout << "NO" << endl;
+    return;
+  }
+  if (s[2] == '0' and s.length() >= 3)
+  {
+    cout << "NO" << endl;
+    return;
+  }
+  int ans = 0;
+  int j = 1;
+  for (int i = s.length() - 1; i >= 2; i--)
+  {
+    ans += (j * (s[i] - '0'));
+    j *= 10;
+  }
+  if (ans >= 2)
+  {
+    cout << "YES" << endl;
+  }
   else
-    cout << (n-m) << endl;
+  {
+    cout << "NO" << endl;
+  }
 }
 int main()
 {

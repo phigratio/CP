@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
@@ -11,21 +12,36 @@ const ll maxi = 1e6 + 1;
 #define pb push_back
 #define F first
 #define S second
-
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
+  string str;
+  cin >> str;
+  string temp = str;
+  ll n = str.size();
+  bool flag = false;
+  for (int i = 0; i < n - 1; i++)
+  {
+    if (str[i] != str[i + 1])
+    {
+      flag = true;
+      swap(str[i], str[i + 1]);
+      break;
+    }
+  }
+
+  if (!flag)
+    cout << "NO" << endl;
   else
-    cout << (n-m) << endl;
+  {
+    cout << "YES" << endl;
+    cout << str << endl;
+  }
 }
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  cin >> t; // t=1;
   while (t--)
   {
     muqtu();

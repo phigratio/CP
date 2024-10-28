@@ -14,13 +14,28 @@ const ll maxi = 1e6 + 1;
 
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
-  else
-    cout << (n-m) << endl;
+  ll n;
+  cin >> n;
+  vector<ll> arr(n);
+  for (int i = 0; i < n; i++)
+  {
+    cin >> arr[i];
+  }
+  unordered_map<ll, ll> hesh;
+  for (int i = 0; i < n; i++)
+  {
+    hesh[arr[i] - i]++;
+  }
+
+  ll ans = 0;
+  for (auto cnt : hesh)
+  {
+    ll x = cnt.second;
+    ans += ((x * (x - 1)) / 2);
+  }
+  cout << ans << endl;
 }
+
 int main()
 {
   faster;

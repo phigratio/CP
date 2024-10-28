@@ -14,18 +14,35 @@ const ll maxi = 1e6 + 1;
 
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
-  else
-    cout << (n-m) << endl;
+  ll n;
+  cin >> n;
+  vector<ll> arr(n);
+  map<ll, ll> mp;
+  for (int i = 0; i < n; i++)
+  {
+    cin >> arr[i];
+  }
+
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = i + 1; j < n; j++)
+    {
+      mp[arr[i] + arr[j]]++;
+    }
+  }
+  ll ans = 0;
+  for (auto x : mp)
+  {
+    ans = max(ans, x.second);
+  }
+
+  cout << ans << endl;
 }
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  t = 1;
   while (t--)
   {
     muqtu();

@@ -14,18 +14,33 @@ const ll maxi = 1e6 + 1;
 
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
-  else
-    cout << (n-m) << endl;
+  ll n;
+  cin >> n;
+  ll k;
+  cin >> k;
+  map<ll, ll> arr;
+  ll mexi = INT_MIN;
+  for (int i = 0; i < n; i++)
+  {
+    ll x;
+    cin >> x;
+    arr[x]++;
+  }
+  for (const auto &pair : arr)
+  {
+    mexi = max(mexi, pair.second);
+  }
+  ll dishes = ceil((mexi * 1.0) / k);
+
+  ll ans = (dishes * k * arr.size()) - n;
+  cout << ans << endl;
 }
+
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  t = 1;
   while (t--)
   {
     muqtu();

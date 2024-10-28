@@ -14,13 +14,39 @@ const ll maxi = 1e6 + 1;
 
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
+  ll n;
+  cin >> n;
+
+  string s;
+  cin >> s;
+  ll cnt0 = 0;
+  for (int i = 0; i < n; i++)
+  {
+    if (s[i] == '0')
+    {
+      cnt0++;
+    }
+  }
+
+  if (cnt0 == 0)
+  {
+    cout << "DRAW" << endl;
+  }
+  else if (cnt0 == 1)
+  {
+    cout << "BOB" << endl;
+  }
+  else if (cnt0 % 2)
+  {
+    cout << "ALICE" << endl;
+  }
   else
-    cout << (n-m) << endl;
+  {
+    cout << "BOB" << endl;
+  }
+  return;
 }
+
 int main()
 {
   faster;

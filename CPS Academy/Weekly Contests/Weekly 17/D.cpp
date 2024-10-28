@@ -11,21 +11,35 @@ const ll maxi = 1e6 + 1;
 #define pb push_back
 #define F first
 #define S second
-
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
-  else
-    cout << (n-m) << endl;
+  ll n;
+  cin >> n;
+  string str;
+  cin >> str;
+  vector<int> divisors;
+  for (int i = 2; i <= (n / 2); i++)
+  {
+    if (n % i == 0)
+    {
+      divisors.pb(i);
+    }
+  }
+
+  for (int i = 0; i < divisors.size(); i++)
+  {
+    reverse(str.begin(), str.begin() + divisors[i]);
+    }
+
+  reverse(str.begin(), str.end());
+
+  cout << str << endl;
 }
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  t = 1;
   while (t--)
   {
     muqtu();

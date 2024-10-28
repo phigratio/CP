@@ -9,23 +9,24 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 const ll maxi = 1e6 + 1;
 #define pb push_back
-#define F first
-#define S second
-
+#define f first
+#define s second
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
-  else
-    cout << (n-m) << endl;
+  ll n;
+  cin >> n;
+  vector<ll> arr(n + 1);
+  for (int i = 0; i < n; i++)
+  {
+    cin >> arr[i];
+  }
+  cout << arr[0] << endl;
 }
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  cin >> t; // t=1;
   while (t--)
   {
     muqtu();

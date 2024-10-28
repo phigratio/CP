@@ -16,11 +16,21 @@ void muqtu()
 {
   ll n, m;
   cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
+  for (int i = 0; i < m; i++)
+  {
+    ll a, b;
+    cin >> a >> b;
+  }
+  if (n > m)
+  {
+    cout << "YES" << endl;
+  }
   else
-    cout << (n-m) << endl;
+  {
+    cout << "NO" << endl;
+  }
 }
+
 int main()
 {
   faster;

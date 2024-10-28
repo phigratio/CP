@@ -14,18 +14,29 @@ const ll maxi = 1e6 + 1;
 
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
-  else
-    cout << (n-m) << endl;
+  ll n, m, k;
+  cin >> n >> m >> k;
+  vector<ll> arr(n);
+  for (int i = 0; i < n; i++)
+  {
+    cin >> arr[i];
+  }
+  map<ll, vector<ll>> schools;
+  for (int i = 0; i < n; i++)
+  {
+    ll x;
+    cin >> x;
+    schools[x].pb(i + 1);
+  }
+
+  
 }
+
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  t = 1;
   while (t--)
   {
     muqtu();

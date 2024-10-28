@@ -11,21 +11,36 @@ const ll maxi = 1e6 + 1;
 #define pb push_back
 #define F first
 #define S second
-
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
+  ll n;
+  cin >> n;
+  vector<ll> arr(n);
+  ll mexi = 0;
+  ll mexiInd = -1;
+  for (int i = 0; i < n; i++)
+  {
+    cin >> arr[i];
+    mexi = max(mexi, arr[i]);
+    if (mexi == arr[i])
+    {
+      mexiInd = i;
+    }
+  }
+  ll temp = arr[n - 1];
+  sort(arr.begin(), arr.end());
+  if (mexiInd == n - 1)
+  {
+    cout << mexi + arr[n - 2] << endl;
+  }
   else
-    cout << (n-m) << endl;
+    cout << mexi + temp << endl;
 }
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  cin >> t; // t=1;
   while (t--)
   {
     muqtu();

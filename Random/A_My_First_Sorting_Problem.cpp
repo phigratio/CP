@@ -11,21 +11,22 @@ const ll maxi = 1e6 + 1;
 #define pb push_back
 #define F first
 #define S second
-
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
+  ll a, b;
+  cin >> a >> b;
+  if (a < b)
+    cout << a << " " << b << endl;
   else
-    cout << (n-m) << endl;
+  {
+    cout << b << " " << a << endl;
+  }
 }
 int main()
 {
   faster;
   ll t;
-  cin >> t;
+  cin >> t; // t=1;
   while (t--)
   {
     muqtu();

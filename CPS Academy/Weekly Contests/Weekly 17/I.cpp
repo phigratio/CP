@@ -11,15 +11,22 @@ const ll maxi = 1e6 + 1;
 #define pb push_back
 #define F first
 #define S second
-
 void muqtu()
 {
-  ll n, m;
-  cin >> n >> m;
-  if (m >= n)
-    cout << 0 << endl;
-  else
-    cout << (n-m) << endl;
+  ll n, a, b, d;
+  cin >> n >> a >> b >> d;
+
+  ll diff = abs(a - b);
+
+  ll ans = INT_MAX;
+  if (diff % d == 0)
+  {
+    ll temp = (diff) / d;
+    ans = min(ans, temp);
+  }
+
+  diff = n - b;
+  if (diff)
 }
 int main()
 {

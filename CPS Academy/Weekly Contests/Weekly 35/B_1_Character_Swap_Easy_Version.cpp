@@ -40,31 +40,35 @@ void muqtu()
       else
       {
         flag=false;
-        break;
+        
       }
 
     }
-    if(cnt==0)
+    else if(s[i]!=t[i])
+    {
+      cnt++;
+    }
+    
+
+  }
+  if(cnt==0)
     {
       cout<<"YES"<<endl;
-      return ;
+ 
     }
-    if(cnt>2)
+    else if(cnt>2)
     {
       cout<<"NO"<<endl;
       return;
     }
     else if(flag){
       cout<<"YES"<<endl;
-      return ;
+ 
     }
     else
     {
       cout<<"NO"<<endl;
-      return;
     }
-
-  }
 
 }
 int main()
